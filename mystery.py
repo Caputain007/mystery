@@ -3,10 +3,12 @@ import re
 def word_Sort(wordString):
     word = wordString.split(" ")
     wordArray = []
+
     for wordString in word:
         #Strip special chars.
         wordStringUpdated = re.sub("[.!?]", "", wordString)
         wordArray.append(wordStringUpdated)
+
     wordDictionary = {}
     #Dict wordDictionary based on word len
     for index in wordArray:
@@ -14,6 +16,7 @@ def word_Sort(wordString):
             wordDictionary[len(index)] = wordDictionary[len(index)] + [index]
         else:
             wordDictionary[len(index)]=[index]
+
     wordDictionaryOdd = {}
     #Dict a w/ modulo operator is checking if odd from wordDictionary dictionary.
     for index in wordDictionary:
@@ -22,6 +25,7 @@ def word_Sort(wordString):
                 wordDictionaryOdd[index] = wordDictionary[index]
         else:
             continue
+        
     return wordDictionaryOdd
 
 
