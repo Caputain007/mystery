@@ -9,7 +9,7 @@ def word_Sort(wordString):
     for word in word_list:
         if len(word) in wordDictionary: 
             wordDictionary[len(word)] = wordDictionary[len(word)] + [word]
-            print(wordDictionary)
+            #print(wordDictionary)
         else:
             wordDictionary[len(word)] = [word]
 
@@ -26,8 +26,8 @@ def word_Sort(wordString):
 
 
 
-word_Sort("This is a sentence. And yet another one!")
+#word_Sort("This is a sentence. And yet another one!")
 # Tests
-#assert(word_Sort("This is a sentence. And yet another one!") == {1: ['a'], 3: ['And', 'yet', 'one'], 7: ['another']})
-#assert(word_Sort("Miscollated alphabetic superimposition") == {11: ['Miscollated'], 15: ['superimposition']})
-#assert(word_Sort("a a a a bb bb bb ccc ccc") == {1: ['a', 'a', 'a', 'a'], 3: ['ccc', 'ccc']})
+assert(word_Sort("This is a sentence. And yet another one!") == {1: ['a'], 3: ['And', 'yet', 'one'], 7: ['another']})
+assert(word_Sort("Miscollated alphabetic superimposition") == {11: ['Miscollated'], 15: ['superimposition']})
+assert(word_Sort("a a a a bb bb bb ccc ccc") == {1: ['a', 'a', 'a', 'a'], 3: ['ccc', 'ccc']})
